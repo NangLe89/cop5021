@@ -8,7 +8,12 @@ This is a security problem. For example, truncation allowed a hacker to gain roo
 In the following line
 > short len = strlen(input);
 
-the hacker could give a very large input and overflow len. In general, we need to check for all statements of the form LHS = RHS and check that sizeof(LHS) <= sizeof(RHS).
+the hacker could give a very large input and overflow len. In general, we need to check for all statements of the form 
+> LHS = RHS
+
+and check that 
+
+> sizeof(LHS) <= sizeof(RHS).
 
 
 
