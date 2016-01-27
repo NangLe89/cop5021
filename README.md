@@ -5,7 +5,7 @@ Numbers can get distorted from truncation, sign extension addition, etc. A long 
 This is a security problem. For example, truncation allowed a hacker to gain root access. After typing in a user ID, the number became 0, the user ID of root. 
 
 ###Where do errors occur?
-**Assignments**
+**Assignments**  
 In the following line
 > short len = strlen(input);
 
@@ -16,10 +16,10 @@ and check that
 
 > sizeof(LHS) <= sizeof(RHS).
 
-**Comparisons**
+**Comparisons**  
 > (LHS boolop RHS)
 
-**Downcast**
+**Downcast**  
 
 
 Our goal is to detect integer overflow.
