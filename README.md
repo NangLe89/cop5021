@@ -7,13 +7,19 @@ This may cause security problems. For example, truncation once allowed a hacker 
 Our goal is to detect integer overflow.
 
 
-When compiling the line char x = 256, GCC will give the warning
+When compiling the line 
+
+char x = 256;
+
+gcc will give the warning
 
 signed.c : In function 'main':
 signed.c6:12: warning: overflow in implicit constant conversion [-Woverflow]
 char x = 256;
          ^
+
 But it does not give a warning when compiling
+
 char x = 16;
 x = x*x;
 
