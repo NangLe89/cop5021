@@ -6,10 +6,10 @@ This is a security problem. For example, truncation allowed a hacker to gain roo
 Our goal is to write a tool that detects overflow.
 
 For example, the following code should throw an error.
-> char x = 16;  
+> unsigned char x = 16;  
 x = x*x;  
 
-because _char * char_ is no longer a char.
+That's because an unsigned char has a range 0-255. Also because _char * char_ returns an int.
 
 for instance, in the following line
 > short len = strlen(input);
