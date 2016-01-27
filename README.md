@@ -14,6 +14,7 @@ char x = 256;
 gcc will give the warning
 
 signed.c : In function 'main':
+
 signed.c6:12: warning: overflow in implicit constant conversion [-Woverflow]
 char x = 256;
          ^
