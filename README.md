@@ -22,8 +22,8 @@ char x = 256;
 
 But it does not give a warning when compiling
 
-char x = 16;
-x = x*x;
+> char x = 16;  
+x = x*x;  
 
 To catch this error, we need to keep track of two pieces of information. The types, which helps us to know its limits and the greatest value the variable can become.
 
