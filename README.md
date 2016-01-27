@@ -9,7 +9,7 @@ Our goal is to detect integer overflow.
 
 When compiling the line 
 
-char x = 256;
+> char x = 256;  
 
 gcc will give the warning
 
