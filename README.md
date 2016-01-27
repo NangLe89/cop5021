@@ -9,19 +9,9 @@ For example, the following code should throw an error.
 > unsigned char x = 16;  
 x = x*x;  
 
-That's because an unsigned char has a range 0-255. Also because _char * char_ returns an int.
+The variable x becomes 0, not 256. One way to check for this error is to notice that _char * char_ returns an int.
 
-for instance, in the following line
-> short len = strlen(input);
-
-because the attacker can give a very large input and overflow len.
-
-But it does not give a warning when compiling
-> char x = 16;  
-x = x*x;  
-
-
-In general, we need to check for all statements of the form 
+Our first task could be to look for assignment statements
 > LHS = RHS
 
 and check that 
@@ -32,7 +22,6 @@ To do this we need to keep track of the types of each variable.
         
 
 
-To catch this error, we need to keep track of two pieces of information. The types, which helps us to know its limits and the greatest value the variable can become.
 
-How can we keep track of the types of each variable? That sounds easy. For each variable you come across, put it in a table as well as its data type. 
+
 
