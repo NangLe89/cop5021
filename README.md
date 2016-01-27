@@ -30,8 +30,7 @@ To do this we need to keep track of the types of each variable with our analysis
 
 We will analyze C language. C is a relatively low-level language and sacrifices safety for execution speed and has the full range of integer tricks up its sleeve. Because of the low-level capabilities of C, integer problems that show up when using it illustrates the issues that the processor encounters.      
 
-#(d). Any related work on this problem that you can find, and why the related work does not solve the
-problem.
+#(d). Any related work on this problem that you can find, and why the related work does not solve the problem.
 
 /*comment*/ I have not found any paper/material about integer flow yet. We can update it when we find something. 
 
