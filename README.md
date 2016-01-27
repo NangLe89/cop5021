@@ -2,7 +2,7 @@
 ###What is the problem?
 Numbers can get distorted from truncation, sign extension addition, etc. A long may be truncated to a short. Sign extension of 0xf3 (243) could become 0xfffffff3 (-2147483635). Finally, it is possible to add 1 to 255 and get 0.
 
-This may cause security problems. For example, truncation once allowed a hacker to gain root access. After typing in a user ID, the number became 0, the user ID of root. 
+This is a security problem. For example, truncation once allowed a hacker to gain root access. After typing in a user ID, the number became 0, the user ID of root. 
 
 ###Where do errors occur?
 
