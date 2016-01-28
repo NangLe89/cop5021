@@ -27,14 +27,21 @@ and check that
 To do this we need to keep track of the types of each variable with our analysis tool.
 
 #(c). The language your tool will analyze. 
-
-We will analyze C language. C is a relatively low-level language and sacrifices safety for execution speed and has the full range of integer tricks up its sleeve. Because of the low-level capabilities of C, integer problems that show up when using it illustrates the issues that the processor encounters.      
+/*check*/
+>> "We are about to use LLVM compiler infrastructure to complete our project and our main language is C. It is a “low-level virtual machine” which contains a set of modular and reusable compiler, including full support for tool-chain technologies. Its front-ends use C and C++ as a tools for development". We will analyze C language. C is a relatively low-level language and sacrifices safety for execution speed and has the full range of integer tricks up its sleeve. Because of the low-level capabilities of C, integer problems that show up when using it illustrates the issues that the processor encounters.      
 
 #(d). Any related work on this problem that you can find, and why the related work does not solve the problem.
 
 /*comment*/ I have not found any paper/material about integer flow yet. We can update it when we find something. 
+/*please check my work*/ These are some research papers on integer overflow problem. Some researchers built a program to check and detect the integer overflow vulnerabilities on C, which is based on semantics and symbolic function models checking [2] [3]. The program checker, called SMT-Constrained Symbolic Execution Engine, run the analysis on a program and find the unrestricted context depth (path sensitive) and find the program path (based on thread identify number), then apply SMT Solving engine and Eclipse extension to check whether or not the program have integer overflow problem or bugs [2].  The other research paper was described another checking program, called Integer Overflow Checker (IOC). The checking program was used to detect the undefined integer behaviors and well-define wraparound behaviors in C/C++ [3]. Moreover, Raphael Ernani Rodrigues, et. al, proposed a new algorithm applied static range analysis to detect the integer overflow (detect the false value out of range) and uses novel techniques to handle comparison between variables [6]. 
 
-
-#Reference
+#Reference /*updated*/
 [1]. 19 Deadly Sins of Software Security: Programming Flaws and How to Fix Them by Michael Howard, David LeBlanc, John Viega, McGraw-Hill Osborne Media, July 2005.
+[2]. Muntean, P.; Rahman, M.; Ibing, A.; Eckert, C., "SMT-constrained symbolic execution engine for integer overflow detection in C code," in Information Security for South Africa (ISSA), 2015 , vol., no., pp.1-8, 12-13 Aug. 2015.
+[3]. Dietz, W.; Peng Li; Regehr, J.; Adve, V., "Understanding integer overflow in C/C++," in Software Engineering (ICSE), 2012 34th International Conference on , vol., no., pp.760-770, 2-9 June 2012.
+[4]. Qixue Xiao; Yu Chen; Hui Huang; Lanhan Qi, "SMT Solvers for Integer Overflows," in Instrumentation, Measurement, Computer, Communication and Control (IMCCC), 2013 Third International Conference on , vol., no., pp.106-113, 21-23 Sept. 2013.
+[5]. Cotroneo, D.; Natella, R., "Monitoring of Aging Software Systems Affected by Integer Overflows," in Software Reliability Engineering Workshops (ISSREW), 2012 IEEE 23rd International Symposium on , vol., no., pp.265-270, 27-30 Nov. 2012.
+[6]. Rodrigues, R.E.; Sperle Campos, V.H.; Magno Quintao Pereira, F., "A fast and low-overhead technique to secure programs against integer overflows," in Code Generation and Optimization (CGO), 2013 IEEE/ACM International Symposium on , vol., no., pp.1-11, 23-27 Feb. 2013.
+[7]. Gok, M.; Schulte, M.J.; Balzola, P.I., "Efficient integer multiplication overflow detection circuits," in Signals, Systems and Computers, 2001. Conference Record of the Thirty-Fifth Asilomar Conference on , vol.2, no., pp.1661-1665 vol.2, 4-7 Nov. 2001.
+[8].
 
